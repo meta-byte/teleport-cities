@@ -8,8 +8,8 @@ const CitySelector = () => {
       const response = await fetch("https://api.teleport.org/api/urban_areas/");
       const jsonData = await response.json();
 
-      setCities(jsonData);
-      console.log(jsonData);
+      setCities(jsonData._links["ua:item"]);
+      console.log(cities);
     } catch (err) {
       console.error(err.message);
     }
@@ -27,8 +27,8 @@ const CitySelector = () => {
             <tr key={city.name}>
               <td>{city.name}</td>
               <td>
-                <button className="btn btn-danger" onClick={""}>
-                  Delete
+                <button className="btn" onClick={""}>
+                  select
                 </button>
               </td>
             </tr>
