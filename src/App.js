@@ -1,13 +1,16 @@
 import React, { Fragment } from "react";
 import "./App.css";
 
-import CitySelector from "./components/CitySelector";
+import CityWindow from "./components/CityWindow";
 
 function App() {
   return (
     <Fragment>
       <div className="container">
-        <CitySelector />
+        <CityWindow />
+      </div>
+      <div className="container">
+        <CityWindow />
       </div>
     </Fragment>
   );
